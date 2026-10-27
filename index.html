@@ -3,115 +3,215 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#f4f2ec">
+  <meta name="theme-color" content="#fbfbfd">
   <meta name="description" content="사람과 브랜드 사이의 좋은 경험을 설계하는 UI·UX 및 브랜드 디자이너 김새준의 포트폴리오와 디자인 기록입니다.">
-  <meta property="og:title" content="김새준 — 좋은 경험을 설계합니다">
-  <meta property="og:description" content="UI·UX · Brand Design · Design Notes">
+  <meta property="og:title" content="Saejun Kim — Design Studio">
+  <meta property="og:description" content="UI·UX · Brand Identity · Design Notes">
   <meta property="og:type" content="website">
-  <title>김새준 — 좋은 경험을 설계합니다</title>
+  <title>Saejun Kim — Design Studio</title>
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&family=Noto+Sans+KR:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
   <link rel="stylesheet" href="styles.css">
+  <script>document.documentElement.classList.add('js');</script>
 </head>
 <body>
   <a class="skip-link" href="#main">본문으로 바로가기</a>
+
   <header class="site-header">
-    <a class="wordmark" href="#top" aria-label="김새준 홈"><span class="mark">s.</span><span>SAEJUUN KIM</span></a>
-    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="메뉴 열기"><span></span><span></span></button>
-    <nav id="site-nav" class="site-nav" aria-label="주요 메뉴">
-      <a href="#work">선택한 작업</a><a href="#about">소개</a><a href="blog.html">디자인 노트</a><a class="nav-contact" href="#contact">함께 일하기 <span aria-hidden="true">↗</span></a>
-    </nav>
+    <div class="header-inner">
+      <a class="wordmark" href="#top" aria-label="Saejun Kim 홈">Saejun Kim<span>Design Studio</span></a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="메뉴 열기"><span></span><span></span></button>
+      <nav id="site-nav" class="site-nav" aria-label="주요 메뉴">
+        <a href="#work">Work</a>
+        <a href="#about">About</a>
+        <a href="#process">Process</a>
+        <a href="blog.html">Journal</a>
+        <a class="nav-cta" href="#contact">Contact</a>
+      </nav>
+    </div>
   </header>
 
   <main id="main">
-    <section class="hero wrap" id="top">
-      <div class="hero-copy">
-        <p class="eyebrow"><span class="live-dot"></span> INDEPENDENT DESIGNER · SEOUL, KR</p>
-        <h1>좋은 경험은<br>작은 <span class="serif-word">차이</span>에서<br>시작됩니다<span class="blue-dot">.</span></h1>
-        <div class="hero-bottom">
-          <p class="hero-intro">안녕하세요, 디지털 제품과 브랜드의 다음 장면을 설계하는<br class="desktop-only"> UI·UX 및 브랜드 디자이너 <strong>김새준</strong>입니다.</p>
-          <a class="round-link" href="#work" aria-label="작업 보기"><span>작업 보기</span><b aria-hidden="true">↓</b></a>
+    <!-- Hero -->
+    <section class="hero" id="top">
+      <div class="wrap hero-copy">
+        <p class="kicker" data-reveal>Independent Design Practice — Seoul</p>
+        <h1 data-reveal>좋은 경험은<br>작은 차이에서 시작됩니다.</h1>
+        <p class="hero-lede" data-reveal>디지털 제품과 브랜드의 다음 장면을 설계하는 UI·UX 및 브랜드 디자이너, 김새준입니다.</p>
+        <div class="hero-links" data-reveal>
+          <a class="btn btn-solid" href="#work">작업 보기</a>
+          <a class="link-arrow" href="#about">스튜디오 소개</a>
         </div>
       </div>
-      <div class="hero-art" aria-label="겹쳐진 색면과 원으로 만든 추상 그래픽">
-        <div class="art-index">FIG. 01 <span>DESIGNING THE IN-BETWEEN</span></div>
-        <div class="art-grid"></div><div class="art-orbit orbit-one"></div><div class="art-orbit orbit-two"></div>
-        <div class="art-disc"></div><div class="art-square"></div><div class="art-spark">✳</div>
-        <div class="art-caption">CLARITY<br>MEETS<br>CHARACTER</div>
-        <span class="art-coordinate">37°33' N / 126°58' E</span>
-      </div>
-      <div class="hero-foot"><span>독립 디자이너</span><span>UI·UX · 브랜드 · 디지털 경험</span><span>SCROLL TO EXPLORE ↓</span></div>
+
+      <figure class="hero-visual" data-reveal>
+        <div class="scene" aria-hidden="true">
+          <div class="scene-wall"></div>
+          <div class="scene-opening"></div>
+          <div class="scene-beam"></div>
+          <div class="scene-floor"></div>
+          <div class="scene-column col-a"></div>
+          <div class="scene-column col-b"></div>
+          <div class="scene-orb"></div>
+        </div>
+        <figcaption class="wrap"><span>Fig. 01</span><span>Light, Space &amp; Interface</span><span>37°33′N 126°58′E</span></figcaption>
+      </figure>
     </section>
 
-    <section class="work-section section-pad" id="work">
-      <div class="wrap">
-        <div class="section-heading">
-          <div><p class="eyebrow">01 / SELECTED EXPLORATIONS</p><h2>생각을 경험으로<br>만드는 과정<span class="blue-dot">.</span></h2></div>
-          <p class="section-note">문제를 발견하고, 맥락을 정리하고,<br>사람에게 닿는 형태로 만듭니다.</p>
-        </div>
-        <div class="project-grid">
-          <article class="project-card project-wide">
-            <a class="project-visual visual-morrow" href="#contact" aria-label="Morrow 프로젝트 문의">
-              <div class="morrow-top"><span>MORROW / 001</span><span>WELLNESS, REIMAGINED</span></div>
-              <div class="morrow-sun"></div><div class="morrow-copy"><span>01 — CONCEPT PROJECT</span><h3>나를 돌보는<br>새로운 리듬</h3><p>작은 루틴을 이어주는 웰니스 앱</p></div>
-              <div class="morrow-ui"><div class="ui-status">9:41 <span>●●●</span></div><div class="ui-date">MONDAY, MAY 12</div><strong>오늘은<br>어떤 속도로<br>가볼까요?</strong><div class="ui-pill">오늘의 루틴 시작 <b>↗</b></div><div class="ui-tabs">⌂　◷　♡　◯</div></div>
-              <span class="visual-arrow">↗</span>
+    <!-- Intro statement -->
+    <section class="intro section">
+      <div class="wrap intro-grid">
+        <p class="label" data-reveal>Studio</p>
+        <p class="intro-text" data-reveal>저는 보기 좋은 화면을 넘어, 사람이 브랜드를 만나는 모든 순간을 설계합니다. <span>전략과 시각 언어, 인터랙션이 하나의 경험으로 이어지도록 — 덜어내고, 정돈하고, 오래 남게.</span></p>
+      </div>
+    </section>
+
+    <!-- Work -->
+    <section class="work section" id="work">
+      <div class="wrap section-head">
+        <p class="label" data-reveal>Selected Work</p>
+        <h2 data-reveal>생각을 경험으로<br>만드는 과정.</h2>
+      </div>
+
+      <div class="wrap projects">
+        <article class="project" data-reveal>
+          <a class="project-media media-morrow" href="#contact" aria-label="Morrow 프로젝트 문의">
+            <div class="morrow-sun"></div>
+            <div class="phone">
+              <div class="phone-screen">
+                <span class="phone-date">Monday, May 12</span>
+                <strong>오늘은 어떤<br>속도로 가볼까요?</strong>
+                <div class="phone-rings"><i></i><i></i><i></i></div>
+                <span class="phone-btn">오늘의 루틴 시작</span>
+              </div>
+            </div>
+          </a>
+          <div class="project-info">
+            <span class="project-no">01</span>
+            <div>
+              <h3>Morrow</h3>
+              <p>나를 돌보는 새로운 리듬. 작은 루틴을 이어주는 웰니스 앱.</p>
+            </div>
+            <dl>
+              <div><dt>Discipline</dt><dd>UI·UX, Product Strategy</dd></div>
+              <div><dt>Year</dt><dd>2025</dd></div>
+            </dl>
+          </div>
+        </article>
+
+        <div class="project-pair">
+          <article class="project" data-reveal>
+            <a class="project-media media-grove" href="#contact" aria-label="Grove 프로젝트 문의">
+              <div class="arch arch-1"></div>
+              <div class="arch arch-2"></div>
+              <div class="arch arch-3"></div>
+              <span class="grove-mark">grove</span>
             </a>
-            <div class="project-meta"><div><span class="project-type">UI·UX · PRODUCT STRATEGY</span><h3>Morrow — 나를 돌보는 루틴</h3></div><span class="project-year">SELF-INITIATED · 2025</span></div>
+            <div class="project-info">
+              <span class="project-no">02</span>
+              <div>
+                <h3>Grove</h3>
+                <p>천천히 자라는 생활을 위한 브랜드 아이덴티티.</p>
+              </div>
+              <dl>
+                <div><dt>Discipline</dt><dd>Brand Identity, Art Direction</dd></div>
+                <div><dt>Year</dt><dd>2025</dd></div>
+              </dl>
+            </div>
           </article>
-          <article class="project-card">
-            <a class="project-visual visual-grove" href="#contact" aria-label="Grove 프로젝트 문의">
-              <div class="grove-logo">grove<span>®</span></div><div class="grove-leaf leaf-a"></div><div class="grove-leaf leaf-b"></div><div class="grove-orb"></div><p>GROW AT<br>YOUR OWN<br>PACE.</p><span class="grove-small">A BRAND FOR SLOW LIVING</span><span class="visual-arrow">↗</span>
+
+          <article class="project" data-reveal>
+            <a class="project-media media-sori" href="#contact" aria-label="소리의 모양 프로젝트 문의">
+              <div class="wave" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+              <span class="sori-track">비 온 뒤, 을지로 <em>00:18 / 02:43</em></span>
             </a>
-            <div class="project-meta"><div><span class="project-type">BRAND IDENTITY · ART DIRECTION</span><h3>Grove — 천천히 자라는 생활</h3></div><span class="project-year">SELF-INITIATED · 2025</span></div>
+            <div class="project-info">
+              <span class="project-no">03</span>
+              <div>
+                <h3>소리의 모양</h3>
+                <p>귀로 만나는 서울의 장면들. 도시 사운드 아카이브.</p>
+              </div>
+              <dl>
+                <div><dt>Discipline</dt><dd>Digital Experience, UI</dd></div>
+                <div><dt>Year</dt><dd>2024</dd></div>
+              </dl>
+            </div>
           </article>
-          <article class="project-card">
-            <a class="project-visual visual-sori" href="#contact" aria-label="Sori 프로젝트 문의">
-              <div class="sori-top"><span>소리의 모양</span><span>FIELD NOTES / 001</span></div><div class="sound-wave"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><h3>귀로 만나는<br>서울의 장면들</h3><div class="sori-player"><span>▶</span><div><b>비 온 뒤, 을지로</b><small>00:18 / 02:43</small></div><span>•••</span></div><span class="visual-arrow">↗</span>
-            </a>
-            <div class="project-meta"><div><span class="project-type">DIGITAL EXPERIENCE · UI DESIGN</span><h3>소리의 모양 — 도시 사운드 아카이브</h3></div><span class="project-year">SELF-INITIATED · 2024</span></div>
-          </article>
         </div>
-        <p class="portfolio-disclaimer">위 사례는 디자인 방향과 역량을 보여주기 위한 개인 콘셉트 프로젝트입니다.</p>
+
+        <div class="index-table" data-reveal>
+          <div class="index-row index-head"><span>No.</span><span>Project</span><span>Discipline</span><span>Year</span></div>
+          <a class="index-row" href="#contact"><span>01</span><span>Morrow</span><span>UI·UX · Product Strategy</span><span>2025</span></a>
+          <a class="index-row" href="#contact"><span>02</span><span>Grove</span><span>Brand Identity · Art Direction</span><span>2025</span></a>
+          <a class="index-row" href="#contact"><span>03</span><span>소리의 모양</span><span>Digital Experience · UI</span><span>2024</span></a>
+        </div>
+        <p class="note">위 사례는 디자인 방향과 역량을 보여주기 위한 개인 콘셉트 프로젝트입니다.</p>
       </div>
     </section>
 
-    <section class="statement-section section-pad" id="about">
-      <div class="wrap statement-grid">
-        <div><p class="eyebrow">02 / A LITTLE ABOUT ME</p><span class="statement-mark">“</span></div>
-        <div><h2>복잡한 것을<br>쉽고, 분명하고,<br><em>기억에 남게.</em></h2><p class="statement-body">저는 보기 좋은 화면을 넘어, 사람이 브랜드를 만나는 모든 순간을 디자인합니다. 왜 필요한지부터 함께 질문하고, 전략과 시각 언어, 인터랙션이 하나의 경험으로 이어지도록 만듭니다.</p><a class="text-link" href="#contact">저와 더 이야기하기 <span>↗</span></a></div>
-        <div class="about-side"><div class="about-stamp">DESIGN<br>WITH<br>INTENTION<span>✳</span></div><div class="about-list"><span>FOCUS</span><p>Digital Product<br>Brand Identity<br>Experience Design<br>Design Direction</p></div></div>
-      </div>
-    </section>
-
-    <section class="approach-section section-pad">
+    <!-- About (dark) -->
+    <section class="about section dark" id="about">
       <div class="wrap">
-        <div class="section-heading approach-heading"><div><p class="eyebrow">03 / HOW I WORK</p><h2>좋은 질문에서<br>좋은 디자인으로<span class="blue-dot">.</span></h2></div><p class="section-note">함께 생각하고 빠르게 만들어<br>더 나은 방향을 찾습니다.</p></div>
-        <div class="steps">
-          <article><span class="step-num">01</span><div><h3>듣고 발견하기</h3><p>사람과 비즈니스의 맥락을 듣고, 진짜 풀어야 할 문제를 찾습니다.</p></div><span class="step-icon">⌕</span></article>
-          <article><span class="step-num">02</span><div><h3>방향 정하기</h3><p>리서치와 전략을 바탕으로 핵심 경험과 브랜드의 기준을 세웁니다.</p></div><span class="step-icon">↗</span></article>
-          <article><span class="step-num">03</span><div><h3>만들고 다듬기</h3><p>아이디어를 빠르게 시각화하고, 피드백으로 더 나은 해답을 만듭니다.</p></div><span class="step-icon">✳</span></article>
-          <article><span class="step-num">04</span><div><h3>함께 성장하기</h3><p>출시가 끝이 아니라, 실제 반응과 배움이 다음 개선으로 이어지게 합니다.</p></div><span class="step-icon">⤴</span></article>
+        <p class="label" data-reveal>About</p>
+        <h2 class="about-title" data-reveal>복잡한 것을 쉽고,<br>분명하고, <span>기억에 남게.</span></h2>
+        <div class="about-grid">
+          <p data-reveal>왜 필요한지부터 함께 질문합니다. 사람과 비즈니스의 맥락을 이해한 뒤, 그 위에 필요한 것만 남기는 방식으로 일합니다. 화면 하나, 문장 하나에도 이유가 있도록.</p>
+          <dl class="facts" data-reveal>
+            <div><dt>Focus</dt><dd>Digital Product<br>Brand Identity<br>Experience Design<br>Design Direction</dd></div>
+            <div><dt>Based in</dt><dd>Seoul, Korea</dd></div>
+          </dl>
         </div>
       </div>
     </section>
 
-    <section class="journal-section section-pad" id="journal">
+    <!-- Process -->
+    <section class="process section" id="process">
+      <div class="wrap section-head">
+        <p class="label" data-reveal>Process</p>
+        <h2 data-reveal>좋은 질문에서<br>좋은 디자인으로.</h2>
+      </div>
+      <ol class="wrap steps">
+        <li data-reveal><span>01</span><h3>Listen</h3><p>사람과 비즈니스의 맥락을 듣고, 진짜 풀어야 할 문제를 찾습니다.</p></li>
+        <li data-reveal><span>02</span><h3>Define</h3><p>리서치와 전략을 바탕으로 핵심 경험과 브랜드의 기준을 세웁니다.</p></li>
+        <li data-reveal><span>03</span><h3>Make</h3><p>아이디어를 빠르게 시각화하고, 피드백으로 더 나은 해답을 만듭니다.</p></li>
+        <li data-reveal><span>04</span><h3>Evolve</h3><p>출시 이후의 반응과 배움이 다음 개선으로 이어지게 합니다.</p></li>
+      </ol>
+    </section>
+
+    <!-- Journal -->
+    <section class="journal section" id="journal">
+      <div class="wrap section-head split">
+        <div>
+          <p class="label" data-reveal>Journal</p>
+          <h2 data-reveal>만들며 배운 것들.</h2>
+        </div>
+        <a class="link-arrow" href="blog.html" data-reveal>모든 글 보기</a>
+      </div>
+      <div class="wrap journal-list">
+        <a class="journal-row" href="blog.html#small-details" data-reveal><time datetime="2025-06-12">2025.06.12</time><h3>좋은 인터페이스는 작은 망설임을 줄인다</h3><span>UI·UX</span></a>
+        <a class="journal-row" href="blog.html#brand-voice" data-reveal><time datetime="2025-05-28">2025.05.28</time><h3>브랜드의 목소리는 어떻게 화면이 되는가</h3><span>Brand</span></a>
+        <a class="journal-row" href="blog.html#good-questions" data-reveal><time datetime="2025-04-09">2025.04.09</time><h3>좋은 디자인을 만드는 질문 세 가지</h3><span>Process</span></a>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="contact" id="contact">
       <div class="wrap">
-        <div class="journal-heading"><div><p class="eyebrow">04 / DESIGN NOTES</p><h2>만들며 배운 것들<span class="blue-dot">.</span></h2></div><a class="text-link" href="blog.html">모든 글 보기 <span>↗</span></a></div>
-        <div class="journal-grid">
-          <a class="journal-card" href="blog.html#small-details"><span class="journal-no">NOTE 001 · 5 MIN READ</span><span class="journal-icon icon-one">✳</span><h3>좋은 인터페이스는<br>작은 망설임을 줄인다</h3><p>사용자가 멈추는 지점을 살피면, 디자인의 다음 질문이 보입니다.</p><span class="journal-date">2025. 06. 12 <b>↗</b></span></a>
-          <a class="journal-card" href="blog.html#brand-voice"><span class="journal-no">NOTE 002 · 4 MIN READ</span><span class="journal-icon icon-two">Aa</span><h3>브랜드의 목소리는<br>어떻게 화면이 되는가</h3><p>말투에서 색과 형태까지, 브랜드의 성격을 일관된 경험으로.</p><span class="journal-date">2025. 05. 28 <b>↗</b></span></a>
-          <a class="journal-card" href="blog.html#good-questions"><span class="journal-no">NOTE 003 · 6 MIN READ</span><span class="journal-icon icon-three">?</span><h3>좋은 디자인을 만드는<br>질문 세 가지</h3><p>화면을 열기 전, 팀과 먼저 나누면 좋은 질문을 기록했습니다.</p><span class="journal-date">2025. 04. 09 <b>↗</b></span></a>
-        </div>
+        <p class="label" data-reveal>Contact</p>
+        <h2 data-reveal>함께 만들 다음 장면,<br>이야기해볼까요?</h2>
+        <p class="contact-lede" data-reveal>새로운 프로젝트, 협업 제안, 디자인에 관한 대화 모두 환영합니다.</p>
+        <a class="btn btn-solid btn-lg" href="https://github.com/SAEJUUN" target="_blank" rel="noopener noreferrer" data-reveal>GitHub에서 연락하기</a>
       </div>
     </section>
-
-    <section class="contact-section" id="contact"><div class="wrap contact-inner"><p class="eyebrow">HAVE A GOOD QUESTION?</p><h2>함께 만들 다음 장면,<br>이야기해볼까요<span class="blue-dot">?</span></h2><p>새로운 프로젝트, 협업 제안, 디자인에 관한 대화 모두 환영합니다.</p><a class="contact-button" href="https://github.com/SAEJUUN" target="_blank" rel="noopener noreferrer">GitHub 프로필에서 연락하기 <span>↗</span></a><span class="contact-orbit orbit-left"></span><span class="contact-orbit orbit-right"></span></div></section>
   </main>
-  <footer class="site-footer"><div class="wrap footer-inner"><a class="wordmark" href="#top"><span class="mark">s.</span><span>SAEJUUN KIM</span></a><span>좋은 경험을 만드는 디자인, 김새준</span><span>© <span data-year>2026</span> SAEJUUN KIM</span></div></footer>
+
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <span>© <span data-year>2026</span> Saejun Kim</span>
+      <nav aria-label="푸터 메뉴"><a href="#work">Work</a><a href="#about">About</a><a href="blog.html">Journal</a><a href="https://github.com/SAEJUUN" target="_blank" rel="noopener noreferrer">GitHub</a></nav>
+    </div>
+  </footer>
   <script src="script.js"></script>
 </body>
 </html>
