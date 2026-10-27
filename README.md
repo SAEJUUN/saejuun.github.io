@@ -2,6 +2,8 @@
 
 UI·UX 및 브랜드 디자이너 김새준의 포트폴리오, 개인 브랜딩, 디자인 노트를 담은 GitHub Pages 사이트입니다.
 
+🔗 **https://saejuun.github.io/**
+
 ## 구성
 
 - `index.html` — 소개, 작업 사례, 디자인 프로세스, 연락처
@@ -11,4 +13,6 @@ UI·UX 및 브랜드 디자이너 김새준의 포트폴리오, 개인 브랜딩
 
 작업 사례는 모두 개인 콘셉트 프로젝트로 표시되어 있습니다. 실제 클라이언트 프로젝트를 추가할 때는 이미지, 역할, 범위, 결과를 해당 사례에 맞게 업데이트해 주세요.
 
-저장소 루트의 `index.html`을 GitHub Pages가 서비스합니다.
+## 배포
+
+별도 빌드 과정 없는 순수 HTML·CSS·JS 정적 사이트입니다. `main` 브랜치에 푸시하면 `.github/workflows/pages.yml`이 저장소 루트를 GitHub Pages(https://saejuun.github.io/)로 자동 배포합니다. 수동 재배포는 Actions 탭에서 **Deploy to GitHub Pages → Run workflow**를 실행하면 됩니다.
