@@ -1,2 +1,14 @@
-# walterkim.github.io
-walterkim.github.io
+# SAEJUUN KIM — Portfolio
+
+UI·UX 및 브랜드 디자이너 김새준의 포트폴리오, 개인 브랜딩, 디자인 노트를 담은 GitHub Pages 사이트입니다.
+
+## 구성
+
+- `index.html` — 소개, 작업 사례, 디자인 프로세스, 연락처
+- `blog.html` — 디자인 노트 아카이브와 글 3편
+- `styles.css` — 반응형 레이아웃과 시각 스타일
+- `script.js` — 모바일 메뉴와 현재 연도 표시
+
+작업 사례는 모두 개인 콘셉트 프로젝트로 표시되어 있습니다. 실제 클라이언트 프로젝트를 추가할 때는 이미지, 역할, 범위, 결과를 해당 사례에 맞게 업데이트해 주세요.
+
+저장소 루트의 `index.html`을 GitHub Pages가 서비스합니다.
