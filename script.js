@@ -1,3 +1,4 @@
+// 모바일 메뉴, 머리 그림자, 작업 분야 거르기, 연도 표시
 const header = document.querySelector('.site-header');
 const menuButton = document.querySelector('.menu-toggle');
 const nav = document.querySelector('.site-nav');
@@ -6,13 +7,10 @@ const setMenu = (open) => {
   menuButton.setAttribute('aria-expanded', String(open));
   menuButton.setAttribute('aria-label', open ? '메뉴 닫기' : '메뉴 열기');
   nav.classList.toggle('is-open', open);
-  document.body.style.overflow = open ? 'hidden' : '';
 };
 
 if (menuButton && nav) {
-  menuButton.addEventListener('click', () => {
-    setMenu(menuButton.getAttribute('aria-expanded') !== 'true');
-  });
+  menuButton.addEventListener('click', () => setMenu(menuButton.getAttribute('aria-expanded') !== 'true'));
   nav.querySelectorAll('a').forEach((link) => link.addEventListener('click', () => setMenu(false)));
   document.addEventListener('keydown', (event) => {
     if (event.key === 'Escape') setMenu(false);
@@ -25,24 +23,22 @@ if (header) {
   window.addEventListener('scroll', onScroll, { passive: true });
 }
 
-const revealItems = document.querySelectorAll('[data-reveal]');
-if ('IntersectionObserver' in window) {
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      if (!entry.isIntersecting) return;
-      entry.target.classList.add('is-visible');
-      observer.unobserve(entry.target);
+// 분야 칩을 누르면 목록 카드와 아래 상세 글을 같은 분야만 남긴다.
+const chips = document.querySelectorAll('.chip[data-filter]');
+const items = document.querySelectorAll('.grid li[data-cat], .case[data-cat]');
+chips.forEach((chip) => {
+  chip.addEventListener('click', () => {
+    const filter = chip.dataset.filter;
+    chips.forEach((c) => {
+      const on = c === chip;
+      c.classList.toggle('is-active', on);
+      c.setAttribute('aria-pressed', String(on));
     });
-  }, { rootMargin: '0px 0px -8% 0px', threshold: 0.08 });
-
-  revealItems.forEach((item) => {
-    const siblings = [...item.parentElement.children].filter((el) => el.hasAttribute('data-reveal'));
-    item.style.setProperty('--delay', `${Math.min(siblings.indexOf(item), 4) * 0.08}s`);
-    observer.observe(item);
+    items.forEach((item) => {
+      item.hidden = filter !== 'all' && item.dataset.cat !== filter;
+    });
   });
-} else {
-  revealItems.forEach((item) => item.classList.add('is-visible'));
-}
+});
 
 document.querySelectorAll('[data-year]').forEach((node) => {
   node.textContent = new Date().getFullYear();
