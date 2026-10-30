@@ -150,6 +150,8 @@ ul { list-style: none; }
 .case-meta div { display: grid; grid-template-columns: 64px 1fr; gap: 12px; }
 .case-meta dt { color: var(--text-3); }
 .case-meta dd { color: var(--text-2); }
+/* 비워 둔 항목은 숨긴다 (내용을 받으면 채운다) */
+.case-meta div:has(dd:empty), .case-text:empty, .card-meta:empty { display: none; }
 
 .case-text { max-width: 720px; margin-top: 24px; color: var(--text-2); }
 
