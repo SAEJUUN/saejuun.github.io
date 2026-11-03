@@ -23,9 +23,10 @@ if (header) {
   window.addEventListener('scroll', onScroll, { passive: true });
 }
 
-// 분야 칩을 누르면 목록 카드와 아래 상세 글을 같은 분야만 남긴다.
+// 작업 목록: 분야 칩을 누르면 그 분야 카드만 남기고, 카드가 하나도 없는 연도는 숨긴다.
 const chips = document.querySelectorAll('.chip[data-filter]');
-const items = document.querySelectorAll('.grid li[data-cat], .case[data-cat]');
+const items = document.querySelectorAll('.grid li[data-cat]');
+const groups = document.querySelectorAll('[data-year-group]');
 chips.forEach((chip) => {
   chip.addEventListener('click', () => {
     const filter = chip.dataset.filter;
@@ -36,6 +37,9 @@ chips.forEach((chip) => {
     });
     items.forEach((item) => {
       item.hidden = filter !== 'all' && item.dataset.cat !== filter;
+    });
+    groups.forEach((group) => {
+      group.hidden = !group.querySelector('li[data-cat]:not([hidden])');
     });
   });
 });
