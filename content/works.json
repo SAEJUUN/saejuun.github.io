@@ -1,0 +1,282 @@
+[
+  {
+    "slug": "bus",
+    "title": "광주대학교 스쿨버스 앱 ‘버스편람’",
+    "category": "uxui",
+    "start": "2023-03-02",
+    "end": "2023-10-14",
+    "type": "",
+    "role": "",
+    "tools": "",
+    "keywords": "직관적 UI · 사용자 편의성 · 캐릭터 브랜딩",
+    "result": "제2회 디지털 문화대전 특선",
+    "award": "특선",
+    "description": "학생들의 등하교를 책임지는 스쿨버스 앱의 접근성을 극대화한 리디자인 프로젝트입니다. 불필요한 단계를 줄이고 핵심 정보에 빠르게 도달할 수 있도록 간결한 인터페이스를 만들었습니다. 눈에 잘 띄는 옐로우 컬러와 공식 캐릭터 ‘라이티’를 적극 활용해, 딱딱할 수 있는 정보 서비스에 친근한 브랜드 정체성을 더했습니다.",
+    "cover": "work/bus-cover.jpg",
+    "coverAlt": "버스편람 앱 시작 화면과 워치 화면",
+    "coverFit": "cover",
+    "images": [
+      {
+        "src": "work/bus-ia.jpg",
+        "alt": "버스편람 정보 구조도: 앱 접속, 로그인, 홈, 검색, 알림, 마이페이지",
+        "caption": "정보 구조 — 검색에서 실시간 버스 위치까지 짧게"
+      },
+      {
+        "src": "work/bus-screens.jpg",
+        "alt": "버스편람 로그인, 시작, 검색, 버스 위치, 마이페이지 화면",
+        "caption": "로그인 · 시작 · 검색 · 버스 위치 확인 · 마이페이지"
+      },
+      {
+        "src": "work/bus-lock.jpg",
+        "alt": "버스편람 잠금 화면 알림",
+        "caption": "잠금 화면 알림과 빠른 동작"
+      }
+    ]
+  },
+  {
+    "slug": "horang-brand",
+    "title": "감 식품 브랜드 ‘호랑감마을’",
+    "category": "brand",
+    "start": "2023-03-02",
+    "end": "2023-10-11",
+    "type": "",
+    "role": "",
+    "tools": "",
+    "keywords": "호작도 · 감 · 전통",
+    "result": "제42회 디자인 문화대전 브랜드디자인 특선",
+    "award": "특선",
+    "description": "1차 생산에 머물러 있던 가족 농장에 현대적인 브랜드 아이덴티티를 만든 프로젝트입니다. 한국 전통 민화 ‘호작도’의 조형적 특징을 감이라는 소재와 결합해, 유쾌하고 감각적인 시각 언어로 풀어냈습니다.",
+    "cover": "work/horang-brand-cover.jpg",
+    "coverAlt": "호랑감마을 호랑이와 산 일러스트",
+    "coverFit": "cover",
+    "images": [
+      {
+        "src": "work/horang-brand.jpg",
+        "alt": "호랑감마을 로고 시스템과 일러스트"
+      },
+      {
+        "src": "work/horang-brand-mockup.jpg",
+        "alt": "호랑감마을 서식류, 컵, 간판, 포장 목업",
+        "caption": "서식류 · 컵 · 간판 · 포장까지 이어지는 적용"
+      }
+    ]
+  },
+  {
+    "slug": "horang-package",
+    "title": "바른 나무에서 자란 건강한 감, 호랑감마을 패키지",
+    "category": "package",
+    "start": "2023-03-02",
+    "end": "2023-10-19",
+    "type": "",
+    "role": "",
+    "tools": "",
+    "keywords": "전통 병풍 · 감나무 · 모던 패키지",
+    "result": "제42회 디자인 문화대전 패키지디자인 금상",
+    "award": "금상",
+    "description": "앞서 만든 ‘호랑감마을’ 브랜드 아이덴티티를 감 가공식품 패키지로 넓혔습니다. 예로부터 복을 기원하며 병풍에 그려 넣던 조선 시대 민화풍의 산세와 까치, 풍성한 감나무를 감각적인 플랫 그래픽으로 다시 해석해, 전통 소재를 트렌디하고 친근하게 풀었습니다.",
+    "cover": "work/horang-package-cover.jpg",
+    "coverAlt": "호랑감마을 병풍 그래픽",
+    "coverFit": "cover",
+    "images": [
+      {
+        "src": "work/horang-package-photos.jpg",
+        "alt": "호랑감마을 감 가공식품 패키지 촬영 사진"
+      }
+    ]
+  },
+  {
+    "slug": "apec",
+    "title": "APEC CEO SUMMIT KOREA 2025 로고",
+    "category": "public",
+    "start": "2024-08-26",
+    "end": "2024-10-04",
+    "type": "",
+    "role": "",
+    "tools": "",
+    "keywords": "연대(solidarity) · 포용적 협력 · 동반 성장",
+    "result": "",
+    "award": "",
+    "description": "2025년 APEC 개최 도시인 경주의 대표 문화유산 첨성대를 위에서 내려다본 기하학적 형태에서 착안한 심볼입니다. 서로 다른 색을 띤 네 개의 리드미컬한 라인이 교차하는 구조로, 다양한 문화적 배경을 넘어 공동의 목표를 향해 손을 맞잡고 연대하는 사람들을 형상화했습니다. APEC 의 핵심 가치인 ‘포용적 협력’과 ‘동반 성장’을 담았습니다.",
+    "cover": "work/apec-logo.jpg",
+    "coverAlt": "APEC CEO SUMMIT KOREA 2025 로고",
+    "coverFit": "contain",
+    "images": [
+      {
+        "src": "work/apec-logo.jpg",
+        "alt": "APEC CEO SUMMIT KOREA 2025 세로형·가로형 로고",
+        "layout": "narrow"
+      }
+    ]
+  },
+  {
+    "slug": "kowepo",
+    "title": "서부발전 자회사 ‘코웨포서비스’ 브랜드",
+    "category": "brand",
+    "start": "2024-08-20",
+    "end": "2024-10-18",
+    "type": "",
+    "role": "",
+    "tools": "",
+    "keywords": "서부발전 · 서비스 · 화합",
+    "result": "",
+    "award": "",
+    "description": "코웨포서비스의 심볼은 미래를 향해 두 팔 벌린 모습과 서부발전(Western Power)의 자회사라는 의미를 담은 ‘W’ 를 결합했습니다. 고객(서부발전)과의 협력과 만족, 조직 구성원의 화합을 상징합니다. 위로 뻗어 나가는 네 개의 기둥 형태로 위생, 보안, 시설, 소방 등 사업군이 함께 발전하며 상생하는 모습을 표현했습니다.",
+    "cover": "work/kowepo-cover.jpg",
+    "coverAlt": "코웨포서비스 W 심볼",
+    "coverFit": "contain",
+    "images": [
+      {
+        "src": "work/kowepo-brand.jpg",
+        "alt": "코웨포서비스 로고와 심볼"
+      },
+      {
+        "src": "work/kowepo-vision.jpg",
+        "alt": "코웨포서비스 웹사이트와 비전 2035 체계도",
+        "caption": "웹사이트 메인 · 비전 2035 체계도 적용"
+      }
+    ]
+  },
+  {
+    "slug": "jazz",
+    "title": "제20회 자라섬 국제 재즈 페스티벌 홍보 포스터",
+    "category": "advertising",
+    "start": "2023-03-02",
+    "end": "2023-09-01",
+    "type": "",
+    "role": "",
+    "tools": "",
+    "keywords": "즉흥 · 입술(개성, 변주, 다양성) · 트럼펫",
+    "result": "Blue Awards 2023 광고디자인 특선",
+    "award": "특선",
+    "description": "짙은 붉은 커튼을 무대 삼아, 재즈의 자유로운 선율을 닮은 트럼펫 형태의 타이포그래피와 다채로운 개성을 지닌 입술들을 배치했습니다. 클래식 마이크 주변에 피어나는 다양한 입술들의 변주로 재즈의 본질인 ‘즉흥성’과 순간의 예술을 역동적으로 표현했습니다.",
+    "cover": "work/jazz-poster.jpg",
+    "coverAlt": "제20회 자라섬 국제 재즈 페스티벌 포스터",
+    "coverFit": "top",
+    "images": [
+      {
+        "src": "work/jazz-poster.jpg",
+        "alt": "제20회 자라섬 국제 재즈 페스티벌 포스터",
+        "layout": "poster"
+      }
+    ]
+  },
+  {
+    "slug": "debut",
+    "title": "예비 신입생을 위한 광주대학교 홍보 포스터 ‘청춘데뷔’",
+    "category": "advertising",
+    "start": "2023-09-01",
+    "end": "2023-10-30",
+    "type": "",
+    "role": "",
+    "tools": "",
+    "keywords": "청춘데뷔 · 도약 · 페이퍼 컷",
+    "result": "",
+    "award": "",
+    "description": "‘청춘데뷔’라는 극적인 무대를 포착해 광주대학교와의 무한한 가능성을 시각화했습니다. 겹겹이 쌓인 푸른 물결 레이어는 청춘의 역동적인 여정을, 그 위의 다채로운 여행 아이콘들은 학교를 통해 나아갈 다양한 미래를 보여줍니다. ‘20대의 첫 무대 광주대에서 여행 시작!’이라는 슬로건으로 학교가 새로운 모험의 시작점임을 유쾌하게 전합니다.",
+    "cover": "work/debut-poster.jpg",
+    "coverAlt": "청춘데뷔 광주대학교 홍보 포스터",
+    "coverFit": "top",
+    "images": [
+      {
+        "src": "work/debut-poster.jpg",
+        "alt": "청춘데뷔 광주대학교 홍보 포스터",
+        "layout": "poster"
+      }
+    ]
+  },
+  {
+    "slug": "grad",
+    "title": "2023 광주대학교 시각영상디자인학과 제40회 졸업작품전 포스터",
+    "category": "advertising",
+    "start": "2023-10-10",
+    "end": "2023-11-10",
+    "type": "",
+    "role": "",
+    "tools": "",
+    "keywords": "틈 · 言(말씀 언) · 관점의 전환",
+    "result": "",
+    "award": "",
+    "description": "‘세상을 바라보는 남다른 시각’이라는 주제 아래, 일상 속 ‘틈’을 발견하고 이를 디자인의 언어로 소통한다는 메시지를 담았습니다. ‘말씀 언(言)’ 자를 90도 회전시킨 타이포그래피를 메인 그래픽과 40주년 로고로 활용해, 관점의 전환이 곧 새로운 발견이자 디자인의 시작임을 표현했습니다.",
+    "cover": "work/grad-poster.jpg",
+    "coverAlt": "제40회 졸업작품전 포스터",
+    "coverFit": "top",
+    "images": [
+      {
+        "src": "work/grad-poster.jpg",
+        "alt": "제40회 졸업작품전 포스터",
+        "layout": "poster"
+      }
+    ]
+  },
+  {
+    "slug": "newsletter",
+    "title": "광주대학교 시각디자인학과 소식지",
+    "category": "editorial",
+    "start": "",
+    "end": "",
+    "type": "",
+    "role": "",
+    "tools": "",
+    "keywords": "",
+    "result": "",
+    "award": "",
+    "description": "학교와 학과 소개, 학과 소식, 강의실 소개로 이어지는 소식지의 표지와 내지를 편집했습니다.",
+    "cover": "work/newsletter.jpg",
+    "coverAlt": "광주대학교 시각디자인학과 소식지 표지와 내지",
+    "coverFit": "contain",
+    "images": [
+      {
+        "src": "work/newsletter.jpg",
+        "alt": "소식지 표지와 내지 펼침면"
+      }
+    ]
+  },
+  {
+    "slug": "fence",
+    "title": "전통 요소를 더한 공사장 가림막",
+    "category": "public",
+    "start": "2023-04-01",
+    "end": "2023-04-21",
+    "type": "공모전 출품 — 제4회 서초구 공사장 가설울타리 상상디자인 공모전 (2023)",
+    "role": "",
+    "tools": "",
+    "keywords": "십장생 · 병풍 · 전통",
+    "result": "",
+    "award": "",
+    "description": "한국의 전통 민화인 ‘일월오봉도’와 ‘십장생’을 현대화해 만든 공사장 가림막 디자인입니다. 2023년 제4회 서초구 공사장 가설울타리 상상디자인 공모전에 참가했습니다.",
+    "cover": "work/fence-ilwol.jpg",
+    "coverAlt": "전통 요소를 넣은 공사장 가림막",
+    "coverFit": "contain",
+    "images": [
+      {
+        "src": "work/fence-ilwol.jpg",
+        "alt": "일월오봉도를 현대화한 공사장 가림막",
+        "caption": "9m · 8.5m · 20m 구간, 높이 6m"
+      }
+    ]
+  },
+  {
+    "slug": "sipjangsaeng",
+    "title": "‘십장생’의 현대화 — 공사장 가림막",
+    "category": "public",
+    "start": "",
+    "end": "",
+    "type": "",
+    "role": "",
+    "tools": "",
+    "keywords": "",
+    "result": "",
+    "award": "",
+    "description": "",
+    "cover": "work/fence-sipjangsaeng.jpg",
+    "coverAlt": "십장생을 현대화한 공사장 가림막",
+    "coverFit": "contain",
+    "images": [
+      {
+        "src": "work/fence-sipjangsaeng.jpg",
+        "alt": "십장생을 현대화한 공사장 가림막 두 종",
+        "caption": "8.5m · 30m 구간, 높이 6m"
+      }
+    ]
+  }
+]

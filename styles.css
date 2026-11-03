@@ -102,6 +102,14 @@ ul { list-style: none; }
 .btn-ghost { background: var(--bg-soft); color: var(--text); }
 
 .section { padding: 96px 24px 0; }
+.page { padding-top: clamp(48px, 8vw, 96px); padding-bottom: 96px; }
+.page-title { margin-top: 8px; font-size: clamp(32px, 5vw, 52px); font-weight: 800; line-height: 1.2; letter-spacing: -0.04em; }
+.section-head-row { display: flex; align-items: flex-end; justify-content: space-between; gap: 16px; }
+.text-link { flex: none; font-size: 15px; font-weight: 700; color: var(--mint-ink); }
+.text-link:hover { text-decoration: underline; }
+.back-link { display: inline-block; margin-bottom: 24px; font-size: 15px; font-weight: 600; color: var(--text-3); }
+.back-link:hover { color: var(--text); }
+.site-nav a[aria-current="page"] { color: var(--text); }
 .section-head h2 { margin-top: 8px; font-size: clamp(30px, 4.4vw, 44px); font-weight: 800; line-height: 1.25; letter-spacing: -0.035em; }
 
 /* ===== 첫 화면 ===== */
@@ -123,13 +131,20 @@ ul { list-style: none; }
 }
 .chip:hover { color: var(--text); }
 .chip.is-active { border-color: var(--text); background: var(--text); color: var(--bg); }
+.chip span { margin-left: 2px; font-weight: 500; opacity: 0.6; }
+
+/* 연도별 타임라인 */
+.year { margin-top: 56px; }
+.year[hidden] { display: none; }
+.year-title { padding-bottom: 12px; border-bottom: 1px solid var(--line); font-size: 22px; font-weight: 800; letter-spacing: -0.02em; }
+.year .grid { margin-top: 24px; }
 
 .grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 40px 24px; margin-top: 32px; }
 .grid li[hidden] { display: none; }
 
 .thumb { aspect-ratio: 4 / 3; overflow: hidden; border-radius: var(--radius); background: var(--bg-soft); }
 .thumb img { width: 100%; height: 100%; object-fit: cover; }
-.thumb-tall img { object-position: center 20%; }
+.thumb-top img { object-position: center 20%; }
 .thumb-contain img { object-fit: contain; padding: 16px; }
 .card:hover .thumb { outline: 2px solid var(--mint); outline-offset: -2px; }
 
@@ -140,11 +155,6 @@ ul { list-style: none; }
 .card-meta { margin-top: 2px; font-size: 14px; color: var(--text-3); }
 
 /* ===== 작업 상세 ===== */
-.cases { margin-top: 48px; }
-.case { padding-top: 96px; }
-.case[hidden] { display: none; }
-.case + .case { border-top: 1px solid var(--line); margin-top: 96px; }
-.case-head h2 { margin-top: 8px; font-size: clamp(26px, 3.4vw, 36px); font-weight: 800; line-height: 1.3; letter-spacing: -0.03em; }
 
 .case-meta { display: grid; gap: 6px; margin-top: 20px; font-size: 15px; }
 .case-meta div { display: grid; grid-template-columns: 64px 1fr; gap: 12px; }
@@ -153,17 +163,22 @@ ul { list-style: none; }
 
 .case-text { max-width: 720px; margin-top: 24px; color: var(--text-2); }
 
-.case figure { margin-top: 32px; }
+.case-images { margin-top: 48px; }
+.case figure + figure { margin-top: 32px; }
 .case figure img { width: 100%; border-radius: var(--radius); background: var(--bg-soft); }
 .case figcaption { margin-top: 10px; font-size: 14px; color: var(--text-3); }
 .case .fig-narrow img { max-width: 640px; }
+.case .fig-poster img { max-width: 560px; margin: 0 auto; }
 
-.case-split { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 440px); gap: 48px; align-items: start; }
-.case-split .poster { margin-top: 0; }
+.pager { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 80px; padding-top: 32px; border-top: 1px solid var(--line); }
+.pager-item { display: flex; flex-direction: column; gap: 4px; padding: 20px 24px; border-radius: var(--radius); background: var(--bg-soft); font-size: 17px; font-weight: 700; line-height: 1.4; }
+.pager-item span { font-size: 13px; font-weight: 600; color: var(--text-3); }
+.pager-item:hover { color: var(--mint-ink); }
+.pager-next { text-align: right; }
 
 /* ===== 소개 ===== */
 .cv { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 40px 48px; margin-top: 56px; }
-.cv h3 { padding-bottom: 12px; border-bottom: 1px solid var(--line); font-size: 15px; font-weight: 700; color: var(--text-3); }
+.cv h2 { padding-bottom: 12px; border-bottom: 1px solid var(--line); font-size: 15px; font-weight: 700; color: var(--text-3); }
 .cv li { display: grid; grid-template-columns: 168px 1fr; gap: 12px; padding: 12px 0; border-bottom: 1px solid var(--line); font-size: 16px; }
 .cv li span { color: var(--text-3); font-variant-numeric: tabular-nums; }
 .cv b { color: var(--mint-ink); }
@@ -182,8 +197,6 @@ ul { list-style: none; }
 /* ===== 반응형 ===== */
 @media (max-width: 900px) {
   .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .case-split { grid-template-columns: 1fr; gap: 0; }
-  .case-split .poster { max-width: 440px; margin-top: 32px; }
   .cv { grid-template-columns: 1fr; }
 }
 
@@ -207,8 +220,9 @@ ul { list-style: none; }
   .stats dd { font-size: 24px; }
 
   .grid { grid-template-columns: 1fr; gap: 32px; }
-  .case { padding-top: 72px; }
-  .case + .case { margin-top: 72px; }
+  .page { padding-bottom: 72px; }
+  .pager { grid-template-columns: 1fr; margin-top: 56px; }
+  .section-head-row { flex-direction: column; align-items: flex-start; }
   .case figure img, .thumb { border-radius: 12px; }
   .cv li { grid-template-columns: 1fr; gap: 0; }
   .footer-inner { flex-direction: column; gap: 4px; }
