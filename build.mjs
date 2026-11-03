@@ -42,6 +42,18 @@ const shortPeriod = (w) => {
   return w.start.slice(0, 4) === w.end.slice(0, 4) ? `${s} – ${w.end.slice(5, 7)}` : `${s} – ${dot(w.end.slice(0, 7))}`;
 };
 const year = (w) => (w.end || w.start || "").slice(0, 4);
+
+/** JPEG 의 가로·세로를 읽어 img 에 적는다. 이미지가 늦게 떠도 화면이 밀리지 않는다. */
+const size = (src) => {
+  const buf = readFileSync(join(root, "assets", src));
+  for (let i = 2; i < buf.length; ) {
+    const marker = buf[i + 1];
+    if (marker >= 0xc0 && marker <= 0xcf && ![0xc4, 0xc8, 0xcc].includes(marker))
+      return ` width="${buf.readUInt16BE(i + 7)}" height="${buf.readUInt16BE(i + 5)}"`;
+    i += 2 + buf.readUInt16BE(i + 2);
+  }
+  return "";
+};
 const url = (path) => profile.siteUrl + path;
 
 const layout = ({ title, description, path, image, body, nav, jsonLd }) => `<!doctype html>
@@ -91,7 +103,7 @@ ${body}
 `;
 
 const card = (w) => `<li data-cat="${w.category}"><a class="card" href="/work/${w.slug}/">
-          <div class="thumb thumb-${w.coverFit || "cover"}"><img src="/assets/${esc(w.cover)}" alt="${esc(w.coverAlt)}" loading="lazy"></div>
+          <div class="thumb thumb-${w.coverFit || "cover"}"><img src="/assets/${esc(w.cover)}" alt="${esc(w.coverAlt)}"${size(w.cover)} loading="lazy"></div>
           <p class="card-cat">${CATEGORIES[w.category]}${w.award ? ` <span class="award">${esc(w.award)}</span>` : ""}</p>
           <h3>${esc(w.title)}</h3>
           ${shortPeriod(w) ? `<p class="card-meta">${shortPeriod(w)}</p>` : ""}
@@ -201,7 +213,7 @@ const detail = (w, i) => {
   // 비어 있는 항목은 보여주지 않는다. 내용을 받으면 works.json 에 채운다.
   const meta = FIELDS.filter(([key]) => values[key]);
   const figure = (img) => `<figure class="${img.layout ? `fig-${img.layout}` : ""}">
-          <img src="/assets/${esc(img.src)}" alt="${esc(img.alt)}" loading="lazy">${img.caption ? `\n          <figcaption>${esc(img.caption)}</figcaption>` : ""}
+          <img src="/assets/${esc(img.src)}" alt="${esc(img.alt)}"${size(img.src)} loading="lazy">${img.caption ? `\n          <figcaption>${esc(img.caption)}</figcaption>` : ""}
         </figure>`;
   return layout({
     title: `${w.title} — ${profile.name}`,
