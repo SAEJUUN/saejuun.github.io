@@ -4,21 +4,41 @@ UI·UX · 브랜드 디자이너 김새준의 포트폴리오 사이트입니다
 
 🔗 **https://saejuun.github.io/**
 
-## 구성
+## 페이지
 
-- `index.html` — 첫 화면, 작업 목록(분야별 거르기), 작업 상세 11개, 소개(경력·학력·수상·활동·도구), 연락처
-- `assets/work/` — 작업 이미지 (포트폴리오 PDF 에서 잘라낸 것)
-- `styles.css` — 레이아웃과 스타일 (Pretendard, 강조색 민트 `#86d0c7`)
-- `script.js` — 모바일 메뉴, 분야 거르기, 연도 표시
+| 주소 | 내용 |
+|---|---|
+| `/` | 첫 화면, 최근 작업 6개, 연락처 |
+| `/work/` | 전체 작업 — 연도별 타임라인(최근에 끝난 작업부터), 분야별 거르기 |
+| `/work/<slug>/` | 작업 상세 — 구분·기간·역할·도구·키워드·결과, 설명, 이미지, 이전·다음 작업 |
+| `/about/` | 소개, 경력·학력·수상·활동·도구, 연락처 |
 
-## 작업 추가하는 법
+## 내용 고치기
 
-1. 이미지를 `assets/work/` 에 넣습니다. (가로 1600px 이하 JPG 권장)
-2. `index.html` 의 `<ul class="grid">` 에 카드 `<li data-cat="분야">` 를 하나 복사해 고칩니다.
-3. 아래 `<div class="cases">` 에 `<article class="case" id="...">` 를 하나 복사해 내용과 이미지를 바꿉니다. 카드의 `href="#..."` 와 `id` 를 맞춥니다.
+글과 이미지는 두 파일만 고치면 됩니다. HTML 은 배포할 때 자동으로 만들어집니다.
 
-분야(`data-cat`)는 `uxui`, `brand`, `advertising`, `package`, `editorial`, `public` 중 하나입니다.
+- `content/works.json` — 작업 목록. 작업 하나가 상세 페이지 하나입니다.
+- `content/profile.json` — 이름, 소개 문구, 경력·학력·수상·활동·도구, 이메일
+- `assets/work/` — 작업 이미지 (가로 1600px 안팎 JPG 권장)
 
-## 배포
+작업 하나의 항목:
 
-빌드 과정 없는 HTML·CSS·JS 정적 사이트입니다. `main` 브랜치에 푸시하면 `.github/workflows/pages.yml` 이 GitHub Pages 로 배포합니다. 수동 재배포는 Actions 탭의 **Deploy to GitHub Pages → Run workflow** 입니다.
+| 항목 | 설명 |
+|---|---|
+| `slug` | 주소에 쓰는 영문 이름 (`/work/bus/`) |
+| `title`, `category` | 제목, 분야(`uxui` `brand` `advertising` `package` `editorial` `public`) |
+| `start`, `end` | 기간 `YYYY-MM-DD`. 목록 순서와 연도 묶음이 이 날짜로 정해지고, 비우면 "기간 미정"에 들어갑니다 |
+| `type`, `role`, `tools`, `keywords`, `result` | 구분 · 역할 · 도구 · 키워드 · 결과. **모르면 `""` 로 비워 두면 화면에 안 보입니다** |
+| `award` | 카드에 붙는 수상 표시 (예: `금상`) |
+| `description` | 설명 글 |
+| `cover`, `coverAlt`, `coverFit` | 카드 이미지, 대체 글, 맞춤(`cover` 꽉 채움 · `contain` 전체 보이기 · `top` 위쪽 기준) |
+| `images` | 상세 이미지 목록 `{ src, alt, caption, layout }` — `layout` 은 `poster`(세로 포스터) · `narrow`(좁게) |
+
+## 미리 보기 · 배포
+
+```bash
+node build.mjs          # _site/ 에 페이지 생성 (Node 18 이상, 설치할 패키지 없음)
+npx serve _site         # 브라우저에서 확인
+```
+
+`main` 브랜치에 올리면 `.github/workflows/pages.yml` 이 `node build.mjs` 를 실행하고 `_site/` 를 GitHub Pages 로 배포합니다.
